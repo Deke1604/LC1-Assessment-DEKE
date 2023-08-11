@@ -1,0 +1,35 @@
+TRAVELLING SALESMAN PROBLEM
+Let's say we're trying to find the shortest route for a pizza delivery driver to visit all of his customers in a given city. The dynamic programming algorithm would work like this:
+
+We would create a table with the starting point of the route as the first row, and then each subsequent row would be the next point on the route.
+We would then fill in the table by considering all the possible paths from the starting point to each of the other points on the route, and finding the shortest path for each one.
+The dynamic programming algorithm can be used to solve any type of routing problem.
+Let's say the pizza delivery driver needs to visit four customers, named A, B, C, and D. We'll start by creating a table, with A as the starting point. The table would look like this:
+A B C D
+A - - -
+B - - -
+C - - -
+D - - -
+The dashes represent the distance from one point to another. For example, A to B is a certain distance, and A to C is a different distance. The next step is to find the shortest distance between A and B, and write that in the table.
+Once we have the shortest distance between A and B, we can move on to finding the shortest distance between A and C. We'll do this by looking at all of the possible routes from A to C, and finding the shortest one. The algorithm will repeat this process for all of the points on the route, until we have the shortest possible route from the starting point to the end point.
+Of course! I'll use Python to write the code for the dynamic programming algorithm. The first step is to create a function called find_shortest_path(), which takes in a list of points and returns the shortest path between them. The function will look like this:
+def find_shortest_path(points):
+code goes here
+The function will loop through all of the points in the list, and for each point, it will find the shortest path to all of the other points. It will then return the shortest path between the first and last point in the list.
+
+Here's the complete code for the function:
+def find_shortest_path(points):
+distance_matrix = [[0 for row in range(len(points))] for column in range(len(points))]
+for i in range(len(points)):
+for j in range(i + 1, len(points)):
+distance_matrix[i][j] = distance_to_point(points[i], points[j])
+
+Now that we have the function to find the shortest path, we can use it to find the shortest route for our pizza delivery driver. We'll create a list of points, representing the four customers, and pass it to the find_shortest_path() function. The code will look like this:
+
+points = [A, B, C, D]
+shortest_route = find_shortest_path(points)
+This will return the shortest path between the four customers.
+
+The result of this code will be a list of distances, in the form of a route, like this:
+shortest_route = [A, B, C, D, A]
+This means that the shortest route from A to B, to C, to D, and back to A is the shortest route between all four customers.
