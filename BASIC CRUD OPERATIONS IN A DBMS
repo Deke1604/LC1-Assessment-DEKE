@@ -1,0 +1,12 @@
+CRUD stands for "Create, Read, Update, and Delete", and it refers to the basic operations that can be performed on a database. Let's go through each one. First, to "create" a record in a database, we can use the "INSERT" statement. For example, to insert a new user into the database, we could write the following SQL statement:
+INSERT INTO users (username, password) VALUES ('username', 'password');
+This statement would create a new record in the "users" table, with the given username and password.
+Next, to "read" a record from a database, we can use the "SELECT" statement. For example, to read the record for a specific user, we could write the following SQL statement:
+SELECT * FROM users WHERE username = 'username';
+This statement would return all of the information for the user with the given username.
+Let's move on to "update". To update a record in a database, we can use the "UPDATE" statement. For example, to update the password for a specific user, we could write the following SQL statement:
+UPDATE users SET password = 'new_password' WHERE username = 'username';
+This statement would update the password for the user with the given username.
+Now, to "delete" a record from a database, we can use the "DELETE" statement. For example, to delete a user from the database, we could write the following SQL statement:
+DELETE FROM users WHERE username = 'username';
+This statement would delete the user with the given username from the "users" table. We've covered the four basic CRUD operations!
