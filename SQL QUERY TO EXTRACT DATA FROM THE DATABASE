@@ -1,0 +1,12 @@
+Let's say we want to find the username and balance for all users who have a balance greater than 100. We could write the following SQL query:
+SELECT username, balance FROM accounts WHERE balance > 100;
+This query would return a list of all users who have a balance greater than 100, along with their usernames and balances.
+Let's say we want to find the average balance for all accounts. We could write the following SQL query:
+SELECT AVG(balance) FROM accounts;
+This query would return the average balance for all accounts in the database.
+Let's say we want to find the most recent transaction for a specific account. We could write the following SQL query:
+SELECT MAX(timestamp) FROM transactions WHERE account_id = 1;
+This query would return the most recent transaction for the account with an account ID of 1.
+Let's say we want to find the total balance for all accounts. We could write the following SQL query:
+SELECT SUM(balance) FROM accounts;
+This query would return the total balance for all accounts in the database.
