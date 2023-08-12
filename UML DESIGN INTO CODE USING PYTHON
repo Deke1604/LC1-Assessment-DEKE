@@ -1,0 +1,55 @@
+We'll take the class diagram we've created and translate it into Python code. We'll start by creating a "User" class in Python. The "User" class will have attributes like "username" and "password", and it will have methods like "login" and "logout". The "User" class will also have a "get_accounts" method that returns a list of "Account" objects.
+First, we'll create the "User" class in Python:
+
+class User:
+def init(self, username, password):
+self.username = username
+self.password = password
+
+def login(self, username, password):
+    if self.username == username and self.password == password:
+        return True
+    else:
+Then, we'll create the "Account" class:
+
+class Account:
+def init(self, username, balance):
+self.username = username
+self.balance = balance
+
+def get_balance(self)
+    return self.balance
+Next, we'll create the "Transaction" class:
+
+class Transaction:
+def init(self, user_id, transaction_amount):
+self.user_id = user_id
+self.transaction_amount = transaction_amount
+
+def add_to_account(self, account_id):
+    account = Account.get_by_id(account_id)
+    account.balance += self.transaction_amount
+    account.save()
+
+def get_transaction_history(self, user_id):
+    return self.user_id == user_id and user_id in account.transactions
+Now we'll create the "Budget" class:
+
+class Budget:
+def init(self, name, starting_balance):
+self.name = name
+self.starting_balance = starting_balance
+
+def get_balance(self):
+    return self.starting_balance - self.transactions.sum()
+Now we can put it all together and make the "Application" class:
+
+class Application:
+def init(self):
+self.users = []
+self.accounts = []
+self.transactions = []
+self.budgets = []
+
+def add_user(self, username, password):
+    user = User.create(username, password)
